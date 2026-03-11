@@ -1,12 +1,12 @@
-public static void main (String agrs[]){
+public static void main (String agrs[]) throws Exception{
 
     int num = 5;
     int num2 = 10;
-    System.out.println(fatorial(num));
-    System.out.println(soma(num));
-    System.out.println(fibonacci(num));
-    System.out.println(somaInt(num, num2));
-    System.out.println(somaInt2(num, num2));
+    System.out.println("Fatorial = " + fatorial(num)); 
+    System.out.println("Somatorio = " + soma(num));
+    System.out.println("Fibonacci = " + fibonacci(num));
+    System.out.println("Somatorio entre k e j = " + somaInt(num, num2));
+    System.out.println("Somatorio 2 entre k e j = " + somaInt2(num, num2)); 
 
 }
 
