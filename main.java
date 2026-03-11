@@ -2,11 +2,13 @@ public static void main (String agrs[]) throws Exception{
 
     int num = 5;
     int num2 = 10;
+    String pal = "arara";
     System.out.println("Fatorial = " + fatorial(num)); 
     System.out.println("Somatorio = " + soma(num));
     System.out.println("Fibonacci = " + fibonacci(num));
     System.out.println("Somatorio entre k e j = " + somaInt(num, num2));
     System.out.println("Somatorio 2 entre k e j = " + somaInt2(num, num2)); 
+    System.out.println("Se eh palindrome = " + isPal(pal)); 
 
 }
 
@@ -43,4 +45,15 @@ public static int somaInt2(int k, int j){
 	if(k == j) return k; 
 	if(k > j) return k + somaInt(k-1, j);
 	return k + somaInt(k+1,j);
+}
+
+//ex5
+public static boolean isPal(String s) throws Exception{
+    if(s == null){throw new Exception();}
+
+    if(s.length() == 0) return true; 
+    if(s.length() == 1) return true;
+    if(s.charAt(0) != s.charAt(s.length()-1)) return false; 
+
+    return isPal(s.substring(1, s.length()-1));
 }
